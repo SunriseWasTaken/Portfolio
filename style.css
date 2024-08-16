@@ -1,0 +1,88 @@
+/* General Styles */
+body {
+    background-color: #000;
+    color: #00ffcc;
+    font-family: 'Press Start 2P', cursive;
+    margin: 0;
+    padding: 0;
+}
+
+.container {
+    max-width: 1200px;
+    margin: auto;
+    padding: 20px;
+}
+
+/* Header and Footer */
+header, footer {
+    text-align: center;
+    padding: 20px;
+}
+
+h1 {
+    font-size: 3em;
+    margin: 0;
+    color: #0ff;
+}
+
+.subtitle {
+    font-size: 1.2em;
+    color: #ff0;
+}
+
+/* Main Content */
+.intro {
+    padding: 20px;
+}
+
+.avatar {
+    float: left;
+    margin-right: 20px;
+    width: 80px;
+    height: 80px;
+}
+
+ul {
+    list-style: none;
+    padding: 0;
+}
+
+a {
+    color: #0ff;
+    text-decoration: none;
+}
+
+a:hover {
+    text-decoration: underline;
+}
+
+/* Sidebar */
+.sidebar {
+    background-color: #111;
+    padding: 20px;
+    margin-top: 20px;
+}
+
+.sidebar ul {
+    list-style: none;
+    padding: 0;
+}
+
+.sidebar ul li {
+    margin-bottom: 10px;
+}
+
+/* Blog */
+.blog ul {
+    list-style: none;
+    padding: 0;
+}
+
+.blog ul li {
+    margin-bottom: 10px;
+}
+
+/* Footer */
+footer {
+    font-size: 0.8em;
+}
