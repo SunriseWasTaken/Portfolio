@@ -330,9 +330,9 @@ export const skills: Skill[] = [
 
 export const profile = {
   name: "Tanvir Hossain Parvin",
-  displayName: "Rafi",
+  displayName: "Tanvir",
   first: "TANVIR",
-  last: "RAFI",
+  last: "TANVIR",
   role: "Computer Science Graduate / Software Engineer",
   location: "London, United Kingdom",
   // NOTE: update the email + social URLs below with your real details.

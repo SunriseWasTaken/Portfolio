@@ -7,9 +7,9 @@ import { Reveal } from "@/components/Reveal";
 import { usePrefersReducedMotion } from "@/lib/hooks";
 
 const bootLines = [
-  { p: "rafi@london", c: "whoami", out: `${profile.name} — ${profile.role}` },
-  { p: "rafi@london", c: "cat status.txt", out: "◦ Graduate open to software engineering roles & interesting problems." },
-  { p: "rafi@london", c: "locate", out: `${profile.location} · open to relocation / remote` },
+  { p: "tanvir@london", c: "whoami", out: `${profile.name} — ${profile.role}` },
+  { p: "tanvir@london", c: "cat status.txt", out: "◦ Graduate open to software engineering roles & interesting problems." },
+  { p: "tanvir@london", c: "locate", out: `${profile.location} · open to relocation / remote` },
 ];
 
 function useTypewriter(text: string, start: boolean, speed = 22) {
@@ -140,7 +140,7 @@ export default function Contact() {
             {(["name", "email"] as const).map((field) => (
               <label key={field} className="block">
                 <span className="mb-1.5 block text-xs text-white/40">
-                  visitor@rafi:~$ set {field}
+                  visitor@tanvir:~$ set {field}
                 </span>
                 <div className="flex items-center gap-2 rounded-lg border border-white/12 bg-black/30 px-3 py-2.5 transition-colors focus-within:border-accent-cyan/60">
                   <span className="text-accent-cyan">$</span>
@@ -159,7 +159,7 @@ export default function Contact() {
 
             <label className="block">
               <span className="mb-1.5 block text-xs text-white/40">
-                visitor@rafi:~$ compose message
+                visitor@tanvir:~$ compose message
               </span>
               <div className="flex gap-2 rounded-lg border border-white/12 bg-black/30 px-3 py-2.5 transition-colors focus-within:border-accent-cyan/60">
                 <span className="text-accent-cyan">$</span>

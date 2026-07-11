@@ -2,9 +2,9 @@ import type { Metadata, Viewport } from "next";
 import "./globals.css";
 
 export const metadata: Metadata = {
-  title: "Tanvir Hossain Parvin (Rafi) — Software Engineer",
+  title: "Tanvir Hossain Parvin — Software Engineer",
   description:
-    "The portfolio of Tanvir Hossain Parvin (Rafi) — a Computer Science graduate and software engineer in London, building meaningful technology across AI, data visualisation, and the web.",
+    "The portfolio of Tanvir Hossain Parvin — a Computer Science graduate and software engineer in London, building meaningful technology across AI, data visualisation, and the web.",
   keywords: [
     "software engineer",
     "computer science graduate",
@@ -18,7 +18,7 @@ export const metadata: Metadata = {
   ],
   authors: [{ name: "Tanvir Hossain Parvin" }],
   openGraph: {
-    title: "Tanvir Hossain Parvin (Rafi) — Software Engineer",
+    title: "Tanvir Hossain Parvin — Software Engineer",
     description:
       "An interactive portfolio of software, AI, and data-visualisation work by a Computer Science graduate in London.",
     type: "website",

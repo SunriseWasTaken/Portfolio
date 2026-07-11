@@ -199,6 +199,18 @@ body {
   }
 }
 
+/* Shared sizing for every layer of the extruded hero identity so the solid
+   word and its outlined copies stack into one clean extrusion. */
+.hero-word {
+  font-family: var(--font-display);
+  font-weight: 700;
+  line-height: 0.82;
+  letter-spacing: -0.06em;
+  font-size: clamp(3.75rem, 19vw, 16rem);
+  white-space: nowrap;
+  margin: 0;
+}
+
 /* Glitch effect for hero identity */
 .glitch {
   position: relative;
