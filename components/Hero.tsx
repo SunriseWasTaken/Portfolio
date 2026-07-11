@@ -80,7 +80,7 @@ export default function Hero() {
     if (!el) return;
 
     const ctx = gsap.context(() => {
-      // Intro
+      // Intro (all breakpoints)
       const intro = gsap.timeline({ defaults: { ease: "power4.out" } });
       intro
         .from(metaTopRef.current, { y: 20, opacity: 0, duration: 0.9 })
@@ -93,22 +93,38 @@ export default function Hero() {
         )
         .from(cueRef.current, { opacity: 0, y: 10, duration: 0.8 }, "-=0.5");
 
-      // Scroll separation timeline (pinned)
-      const tl = gsap.timeline({
-        scrollTrigger: {
-          trigger: el,
-          start: "top top",
-          end: "+=110%",
-          scrub: 1,
-          pin: stage.current,
-          pinSpacing: true,
-        },
+      // Pinned scroll-separation only on larger screens; mobile stays light.
+      const mm = gsap.matchMedia();
+      mm.add("(min-width: 768px)", () => {
+        const tl = gsap.timeline({
+          scrollTrigger: {
+            trigger: el,
+            start: "top top",
+            end: "+=110%",
+            scrub: 1,
+            pin: stage.current,
+            pinSpacing: true,
+          },
+        });
+        tl.to(solidRef.current, { yPercent: -34, scale: 0.72, opacity: 0.12, ease: "power2.in" }, 0)
+          .to(outlineRef.current, { yPercent: 42, scale: 1.35, opacity: 0, ease: "power2.in" }, 0)
+          .to(metaTopRef.current, { yPercent: -120, opacity: 0, ease: "power2.in" }, 0)
+          .to(metaRef.current, { yPercent: 60, opacity: 0, ease: "power2.in" }, 0)
+          .to(cueRef.current, { opacity: 0, duration: 0.2 }, 0);
       });
-      tl.to(solidRef.current, { yPercent: -34, scale: 0.72, opacity: 0.12, ease: "power2.in" }, 0)
-        .to(outlineRef.current, { yPercent: 42, scale: 1.35, opacity: 0, ease: "power2.in" }, 0)
-        .to(metaTopRef.current, { yPercent: -120, opacity: 0, ease: "power2.in" }, 0)
-        .to(metaRef.current, { yPercent: 60, opacity: 0, ease: "power2.in" }, 0)
-        .to(cueRef.current, { opacity: 0, duration: 0.2 }, 0);
+
+      // On small screens, gently fade the hero as it scrolls away (no pin).
+      mm.add("(max-width: 767px)", () => {
+        gsap.to(stage.current, {
+          opacity: 0.15,
+          scrollTrigger: {
+            trigger: el,
+            start: "top top",
+            end: "bottom top",
+            scrub: 1,
+          },
+        });
+      });
     }, root);
 
     return () => ctx.revert();
