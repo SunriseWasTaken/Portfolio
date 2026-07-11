@@ -1,4 +1,4 @@
-# Aria Voss — Portfolio
+# Tanvir Hossain Parvin (Rafi) — Portfolio
 
 A cinematic, interactive portfolio experience — built to feel like a product, not a page.
 
@@ -19,8 +19,9 @@ shared-element case study without ever leaving the page.
   fullscreen case study (overview, problem, solution, process, challenges, features,
   tech, gallery, timeline, links). No page reload — just a new layer of the same
   experience.
-- **Animated About timeline** — milestones (education, internships, hackathons,
-  work, independent) reveal alternately along a spine that fills as you scroll.
+- **Animated About timeline** — milestones (professional experience, education,
+  internship, hackathons, projects) reveal alternately along a spine that fills as
+  you scroll.
 - **Interactive skills network** — technologies as connected nodes; hover one to
   highlight related skills and the projects that shipped them.
 - **Terminal contact** — a developer-terminal interface with a fully accessible,
@@ -56,6 +57,6 @@ static host. A `netlify.toml` is included (`publish = "out"`).
 ## Customising
 
 All content lives in [`lib/data.ts`](lib/data.ts) — profile, projects, milestones,
-and skills. Cover/gallery art is generated as inline SVG so the site has zero
-external image dependencies. Swap in real screenshots by replacing the `cover` and
+and skills. Update the `profile.email` and `profile.socials` URLs with your real
+details, and swap the generated inline-SVG cover art by replacing the `cover` and
 `gallery` fields with image paths under `public/`.

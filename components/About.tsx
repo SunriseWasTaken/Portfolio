@@ -10,7 +10,7 @@ const kindMeta: Record<Milestone["kind"], { label: string; color: string }> = {
   internship: { label: "Internship", color: "#a78bfa" },
   hackathon: { label: "Hackathon", color: "#c6ff5e" },
   work: { label: "Work", color: "#f472b6" },
-  project: { label: "Independent", color: "#fbbf24" },
+  project: { label: "Project", color: "#fbbf24" },
 };
 
 function Node({ m, i }: { m: Milestone; i: number }) {
@@ -73,12 +73,13 @@ export default function About() {
         <Reveal className="lg:sticky lg:top-28 lg:h-fit">
           <p className="eyebrow">02 — About</p>
           <h2 className="mt-4 font-display text-4xl font-semibold leading-[1.05] tracking-tight sm:text-5xl">
-            A path from systems <br className="hidden sm:block" /> to <span className="text-gradient">signals</span>.
+            From ideas to <span className="text-gradient">real-world impact</span>.
           </h2>
-          <p className="mt-6 max-w-md leading-relaxed text-white/60">
-            {profile.summary} Over the years I&apos;ve moved between deep infrastructure and expressive
-            interfaces — and the timeline tells that story.
-          </p>
+          <div className="mt-6 flex max-w-md flex-col gap-4 leading-relaxed text-white/60">
+            {profile.about.map((para, i) => (
+              <p key={i}>{para}</p>
+            ))}
+          </div>
           <div className="mt-8 flex flex-wrap gap-2.5">
             {Object.values(kindMeta).map((k) => (
               <span

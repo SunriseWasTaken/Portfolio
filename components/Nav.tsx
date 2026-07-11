@@ -66,7 +66,7 @@ export default function Nav({ locked }: { locked: boolean }) {
           aria-label="Back to top"
         >
           <span className="relative flex h-7 w-7 items-center justify-center rounded-full bg-gradient-to-br from-accent-cyan to-accent-violet text-[0.7rem] font-bold text-ink">
-            AV
+            TP
           </span>
           <span className="hidden font-display text-sm font-semibold tracking-tight text-white/90 sm:block">
             {profile.name}
@@ -99,7 +99,7 @@ export default function Nav({ locked }: { locked: boolean }) {
 
         <div className="flex items-center gap-2">
           <a
-            href={profile.socials[3].url}
+            href={`mailto:${profile.email}`}
             data-cursor="hover"
             className="hidden rounded-full bg-white px-4 py-1.5 text-sm font-medium text-ink transition-transform duration-300 hover:scale-[1.04] md:block"
           >

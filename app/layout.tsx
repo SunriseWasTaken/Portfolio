@@ -2,22 +2,25 @@ import type { Metadata, Viewport } from "next";
 import "./globals.css";
 
 export const metadata: Metadata = {
-  title: "Aria Voss — Software Engineer & Creative Technologist",
+  title: "Tanvir Hossain Parvin (Rafi) — Software Engineer",
   description:
-    "The portfolio of Aria Voss — an interactive, cinematic showcase of engineering and design work spanning observability platforms, developer tools, and generative art.",
+    "The portfolio of Tanvir Hossain Parvin (Rafi) — a Computer Science graduate and software engineer in London, building meaningful technology across AI, data visualisation, and the web.",
   keywords: [
     "software engineer",
-    "creative technologist",
+    "computer science graduate",
+    "London",
     "portfolio",
     "frontend",
-    "WebGL",
-    "design systems",
+    "AI",
+    "data visualisation",
+    "React",
+    "Next.js",
   ],
-  authors: [{ name: "Aria Voss" }],
+  authors: [{ name: "Tanvir Hossain Parvin" }],
   openGraph: {
-    title: "Aria Voss — Software Engineer & Creative Technologist",
+    title: "Tanvir Hossain Parvin (Rafi) — Software Engineer",
     description:
-      "An interactive, cinematic portfolio of engineering and design work.",
+      "An interactive portfolio of software, AI, and data-visualisation work by a Computer Science graduate in London.",
     type: "website",
   },
 };

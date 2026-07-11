@@ -6,14 +6,22 @@ import { skills, projects, type Skill } from "@/lib/data";
 import { Reveal } from "@/components/Reveal";
 
 const groupColor: Record<Skill["group"], string> = {
-  language: "#6ee7ff",
+  languages: "#6ee7ff",
   frontend: "#a78bfa",
   backend: "#f472b6",
-  infra: "#fbbf24",
-  creative: "#c6ff5e",
+  ai: "#c6ff5e",
+  tools: "#fbbf24",
 };
 
-const groupOrder: Skill["group"][] = ["language", "frontend", "creative", "backend", "infra"];
+const groupLabel: Record<Skill["group"], string> = {
+  languages: "Languages",
+  frontend: "Frontend",
+  backend: "Backend",
+  ai: "AI & Data",
+  tools: "Tools & CS",
+};
+
+const groupOrder: Skill["group"][] = ["languages", "frontend", "ai", "backend", "tools"];
 
 type Pos = { x: number; y: number };
 
@@ -176,7 +184,7 @@ export default function Skills() {
                   </h3>
                 </div>
                 <p className="mt-1 font-mono text-xs uppercase tracking-widest text-white/40">
-                  {activeSkill.group} · {Math.round(activeSkill.level * 100)}% fluency
+                  {groupLabel[activeSkill.group]} · {Math.round(activeSkill.level * 100)}% fluency
                 </p>
                 <div className="mt-4 h-1.5 w-full overflow-hidden rounded-full bg-white/10">
                   <motion.div
@@ -220,9 +228,9 @@ export default function Skills() {
             <p className="font-mono text-[0.62rem] uppercase tracking-widest text-white/40">Domains</p>
             <div className="mt-3 grid grid-cols-2 gap-2.5">
               {groupOrder.map((g) => (
-                <div key={g} className="flex items-center gap-2 text-sm capitalize text-white/70">
+                <div key={g} className="flex items-center gap-2 text-sm text-white/70">
                   <span className="h-2.5 w-2.5 rounded-full" style={{ background: groupColor[g] }} />
-                  {g}
+                  {groupLabel[g]}
                 </div>
               ))}
             </div>
